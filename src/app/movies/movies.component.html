@@ -1,0 +1,9 @@
+<div class="movies" *ngIf="movies">
+  <h2>{{movies.length}} movies found</h2>
+  <app-movie *ngFor="let movie of movies" [movie]="movie">
+  </app-movie>
+</div>
+
+<div *ngIf="!movies">
+  Loading movies...
+</div>
